@@ -2,9 +2,6 @@ package my_project.model;
 
 import KAGO_framework.model.abitur.datenstrukturen.List;
 
-/**
- * Diese Klasse scannt Strings für die Sprache L_Knebi = k(ne)*bi
- */
 public class MagicDoorsScanner extends Scanner<String,String> {
 
     private String debugOutput;

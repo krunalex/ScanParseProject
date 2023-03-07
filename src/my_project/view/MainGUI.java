@@ -33,6 +33,8 @@ public class MainGUI {
             public void stateChanged(ChangeEvent e) {
                 switch((int)(languageIndex.getValue())){
                     case 0: languageLabel.setText("Momentan ist die Sprache L_Knebi gewählt!"); break;
+                    case 1: languageLabel.setText("Momentan ist die Sprache L_MagicDoors gewählt!"); break;
+                    case 2: languageLabel.setText("Momentan ist die Sprache L_Bungalows gewählt!"); break;
                     // Hier könnten theoretisch weitere Beschreibungen stehen, ist aber nicht dringend.
 
                     default: languageLabel.setText("Es ist die Sprache mit dem Index "+languageIndex.getValue()+" gewählt."); break;

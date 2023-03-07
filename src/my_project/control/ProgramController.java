@@ -1,6 +1,7 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
+import my_project.model.BungalowParser;
 import my_project.model.KnebiParser;
 import my_project.model.MagicDoorsParser;
 import my_project.model.MagicDoorsScanner;
@@ -21,6 +22,7 @@ public class ProgramController {
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
     private KnebiParser knebiParser;
     private MagicDoorsParser magicDoorsParser;
+    private BungalowParser bungalowParser;
 
     /**
      * Konstruktor
@@ -43,6 +45,7 @@ public class ProgramController {
         viewController.getSoundController().loadSound("assets/nonono.mp3","no",false);
         knebiParser = new KnebiParser();
         magicDoorsParser = new MagicDoorsParser();
+        bungalowParser = new BungalowParser();
         // todo Eigener Code
 
 
@@ -61,7 +64,8 @@ public class ProgramController {
             // todo Hier können weitere Parser aufgeführt werden
             case 1:
                 return magicDoorsParser.parse(input);
-
+            case 2:
+                return bungalowParser.parse(input);
             default: System.out.println("\nDebug-Info: Für diesen Index ist kein Parser definiert!");
         }
         return false;
@@ -82,7 +86,8 @@ public class ProgramController {
             // todo Hier können weitere Scanner aufgeführt werden.
             case 1:
                 return magicDoorsParser.getScannerResult(input);
-
+            case 2:
+                return bungalowParser.getScannerResult(input);
             default: System.out.println("\nDebug-Info: Für diesen Index ist kein Scanner definiert!");
         }
         return false;
